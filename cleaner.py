@@ -168,7 +168,7 @@ def display_method_info():
 
 def main():
     # Split the page into two columns
-    st.title("Left and Right Column Alignment")
+    st.title("Info of the methods used in the code")
 
     left_column, right_column = st.columns(2)
 
