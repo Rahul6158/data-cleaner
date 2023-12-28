@@ -8,10 +8,14 @@ with left_column:
     st.header("Left Side")
     # Add your content for the left side here
 
-def display_method_info():
-    st.sidebar.title("Method Functionality")
+# Add content to the right column
+with right_column:
+    st.header("Method Functionality")  # Title for the method information
 
-    method_info = {
+    def display_method_info():
+        st.sidebar.title("Method Functionality")
+
+ method_info = {
         "process_docx_text": {
             "Functionality": "Extracts text from a DOCX file.",
             "Parameters": "docx_file (DOCX file path)",
@@ -22,7 +26,6 @@ def display_method_info():
             "Parameters": "uploaded_image (image file), language (optional language for text extraction, default is 'eng')",
             "Output": "Extracted text from the uploaded image"
         },
-        # Add details for other methods similarly
         "process_docx_text_without_lists": {
             "Functionality": "Removes lists from DOCX text.",
             "Parameters": "docx_file (DOCX file path)",
@@ -58,18 +61,17 @@ def display_method_info():
             "Parameters": "text (translated text to convert), output_file (output file path)",
             "Output": "Word document containing the translated text"
         }
-    }
 
-    for method_name, details in method_info.items():
-        st.sidebar.subheader(method_name)
-        for key, value in details.items():
-            st.sidebar.text(f"{key}: {value}")
-        st.sidebar.text("\n")
+        for method_name, details in method_info.items():
+            st.sidebar.subheader(method_name)
+            for key, value in details.items():
+                st.sidebar.text(f"{key}: {value}")
+            st.sidebar.text("\n")
 
-def main():
-    st.image("jangirii.png", width=300)
-    st.title("Text Translation and Conversion to Speech ( MultiLingual )")
+    def main():
+        st.image("jangirii.png", width=300)
+        st.title("Text Translation and Conversion to Speech ( MultiLingual )")
 
-    if __name__ == "__main__":
-        display_method_info()
-        main()
+        if __name__ == "__main__":
+            display_method_info()
+            main()
