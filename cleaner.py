@@ -168,7 +168,8 @@ def display_method_info():
 
 def main():
     # Split the page into two columns
-    left_column, right_column = st.columns(2)
+    left_column, right_column = st.beta_columns(2)
+
 
     # List of method names
     method_names = [
