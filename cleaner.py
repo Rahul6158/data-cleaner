@@ -179,8 +179,7 @@ directly entering text, our app's got you covered—word counts, language select
 and flawless audio generation. Experience the future of text transformation with our intuitive,
 multilingual, and vibrant app—your go-to for seamless translation and speech conversion."
 '''
-st.markdown(project_description, unsafe_allow_html=True)
-
+    st.markdown(project_description, unsafe_allow_html=True)
 
     st.header("Info of the methods used in the code")
 
