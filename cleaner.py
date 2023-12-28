@@ -34,5 +34,8 @@ def null_removal_page():
             href = f'<a href="data:file/csv;base64,{b64}" download="modified_dataset.csv">Download Modified Dataset</a>'
             st.markdown(href, unsafe_allow_html=True)
 
+def main():
+    null_removal_page()
+
 if __name__ == "__main__":
     main()
