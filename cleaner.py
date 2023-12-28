@@ -173,10 +173,10 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
 
     # List of method names
     method_names = [
-        "translate_text_with_google",
         "convert_text_to_speech",
         "get_binary_file_downloader_html",
-        "convert_text_to_word_doc"
+        "convert_text_to_word_doc",
+        "translate_text_with_google"
     ]
 
     # Add content to the left column
