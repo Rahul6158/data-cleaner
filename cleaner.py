@@ -172,7 +172,7 @@ def main():
     project_description = '''
 "Imagine a tool that effortlessly translates text, speaks in multiple languages,
 and transforms documents into speech—all at your fingertips! Our Streamlit-powered app
-is a language wizard: upload DOCX, PDFs, or even images to extract and edit text.
+is a language wizard: upload DOCX, PDFs to extract and edit text.
 Not only does it translate text using Google's magic, but it also converts it into
 spoken words with stunning accuracy. Whether you're editing uploaded files or
 directly entering text, our app's got you covered—word counts, language selection,
@@ -184,9 +184,9 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
     project_description1 = '''
     ---
     
-    Certainly! To use the provided Streamlit app, follow these steps:
+    To use the our Streamlit app, follow these steps:
     
-    ### Page 1:
+    ### Page 1: Document and PDF Translation
     1. **Upload a File**:
        - Use the file uploader to upload a DOCX, PDF, image (JPEG, JPG, PNG), or TXT file. The uploaded file should contain text that you want to translate and convert to speech.
       
@@ -210,7 +210,7 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
        - It generates a downloadable MP3 audio file of the translated text.
        - Provides a download link for the translated text as a Word document.
     
-    ### Page 2:
+    ### Page 2: Text Translation
     1. **Enter Text**:
        - Enter or paste text into the text area to translate and convert to speech.
     
