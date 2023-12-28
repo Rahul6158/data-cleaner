@@ -183,56 +183,56 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
     St.header("How to Use :")
      project_description1 = '''
      Page 1:
-Upload a File:
-
-Use the file uploader to upload a DOCX, PDF, image (JPEG, JPG, PNG), or TXT file. The uploaded file should contain text that you want to translate and convert to speech.
-View Extracted Text:
-
-Once the file is uploaded, the app will extract the text from the file.
-If it's a DOCX file, it removes lists (bullets) and displays the extracted text.
-For PDFs, it extracts the text without lists.
-Images are displayed and the extracted text is shown.
-If it's a TXT file, it displays the text.
-Edit Text:
-
-The extracted text is displayed in an editable text area where you can modify the text if needed.
-Word Count Check:
-
-The app checks the word count of the edited text. If it's over 50,000 words, it warns that it might be too large for translation.
-Translate and Generate:
-
-Select a target language from the dropdown.
-Click the "Translate and Generate Audio/Video Download Links" button.
-This translates the edited text to the chosen language using Google Translate.
-It generates a downloadable MP3 audio file of the translated text.
-Provides a download link for the translated text as a Word document.
-Page 2:
-Enter Text:
-
-Enter or paste text into the text area to translate and convert to speech.
-Word Count Check:
-
-Similar to Page 1, it displays the word count of the entered text.
-Select Target Language:
-
-Choose the target language from the dropdown.
-Translate and Convert:
-
-Click the "Translate - Convert to Speech and get Translated document" button.
-This translates the entered text to the chosen language using Google Translate.
-Generates a downloadable MP3 audio file of the translated text.
-Provides a download link for the translated text as a Word document.
-General Steps:
-Translation Output:
-The translated text and audio can be listened to directly in the app.
-Download the translated text as a Word document.
-Audio Playback:
-Click the audio player to listen to the generated speech.
-Downloads:
-Use the provided download links to save the translated text and audio files.
-
-'''
+    Upload a File:
     
+    Use the file uploader to upload a DOCX, PDF, image (JPEG, JPG, PNG), or TXT file. The uploaded file should contain text that you want to translate and convert to speech.
+    View Extracted Text:
+    
+    Once the file is uploaded, the app will extract the text from the file.
+    If it's a DOCX file, it removes lists (bullets) and displays the extracted text.
+    For PDFs, it extracts the text without lists.
+    Images are displayed and the extracted text is shown.
+    If it's a TXT file, it displays the text.
+    Edit Text:
+    
+    The extracted text is displayed in an editable text area where you can modify the text if needed.
+    Word Count Check:
+    
+    The app checks the word count of the edited text. If it's over 50,000 words, it warns that it might be too large for translation.
+    Translate and Generate:
+    
+    Select a target language from the dropdown.
+    Click the "Translate and Generate Audio/Video Download Links" button.
+    This translates the edited text to the chosen language using Google Translate.
+    It generates a downloadable MP3 audio file of the translated text.
+    Provides a download link for the translated text as a Word document.
+    Page 2:
+    Enter Text:
+    
+    Enter or paste text into the text area to translate and convert to speech.
+    Word Count Check:
+    
+    Similar to Page 1, it displays the word count of the entered text.
+    Select Target Language:
+    
+    Choose the target language from the dropdown.
+    Translate and Convert:
+    
+    Click the "Translate - Convert to Speech and get Translated document" button.
+    This translates the entered text to the chosen language using Google Translate.
+    Generates a downloadable MP3 audio file of the translated text.
+    Provides a download link for the translated text as a Word document.
+    General Steps:
+    Translation Output:
+    The translated text and audio can be listened to directly in the app.
+    Download the translated text as a Word document.
+    Audio Playback:
+    Click the audio player to listen to the generated speech.
+    Downloads:
+    Use the provided download links to save the translated text and audio files.
+    
+    '''
+        
     st.markdown(project_description1, unsafe_allow_html=True)
     
     st.header("Info of the methods used in the code")
