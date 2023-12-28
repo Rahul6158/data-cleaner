@@ -24,6 +24,10 @@ def null_removal_page():
         if st.button("Clear Null Values"):
             modified_data = uploaded_data.dropna()  # Remove rows with null values
 
+            
+        # Show null value counts
+            st.subheader("Null Values in the Dataset:")
+            st.write(uploaded_data.isnull().sum())
             # Display modified data
             st.title("Modified Dataset:")
             st.write(modified_data.head())
