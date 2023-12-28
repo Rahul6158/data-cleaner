@@ -9,49 +9,7 @@ def get_method_code(method_name):
                 text = docx2txt.process(docx_file)
             return text
         '''
-    elif method_name == "extract_text_from_uploaded_image":
-        return '''
-        def extract_text_from_uploaded_image(uploaded_image, language='eng'):
-            try:
-                image = Image.open(uploaded_image)
-                image = image.convert('RGB')
-                text = pytesseract.image_to_string(image, lang=language)
-                return text
-            except Exception as e:
-                return str(e)
-        '''
-    elif method_name == "process_docx_text_without_lists":
-        return '''
-        def process_docx_text_without_lists(docx_file):
-            doc = Document(docx_file)
-            text = ""
-            for paragraph in doc.paragraphs:
-                if not paragraph.style.name.startswith('•'):
-                    text += paragraph.text + '\\n'
-            return text
-        '''
-    elif method_name == "process_pdf_text_without_lists":
-        return '''
-        def process_pdf_text_without_lists(pdf_file):
-            pdf_text = ""
-            try:
-                with st.spinner("Extracting text from PDF..."):
-                    pdf_reader = PyPDF2.PdfReader(pdf_file)
-                    num_pages = len(pdf_reader.pages)
-                    for page_number in range(num_pages):
-                        page = pdf_reader.pages[page_number]
-                        pdf_text += page.extract_text()
-            except Exception as e:
-                st.error(f"Error processing PDF: {str(e)}")
-            return pdf_text
-        '''
-    elif method_name == "process_txt_file":
-        return '''
-        def process_txt_file(txt_file):
-            txt_text = txt_file.read()
-            text = txt_text.decode('utf-8')
-            return text
-        '''
+
     elif method_name == "translate_text_with_google":
         return '''
         def translate_text_with_google(text, target_language):
@@ -118,26 +76,7 @@ def display_method_info():
             "Parameters": "docx_file (DOCX file path)",
             "Output": "Extracted text from the DOCX file"
         },
-        "extract_text_from_uploaded_image": {
-            "Functionality": "Uses Pytesseract to extract text from an uploaded image.",
-            "Parameters": "uploaded_image (image file), language (optional language for text extraction, default is 'eng')",
-            "Output": "Extracted text from the uploaded image"
-        },
-        "process_docx_text_without_lists": {
-            "Functionality": "Removes lists from DOCX text.",
-            "Parameters": "docx_file (DOCX file path)",
-            "Output": "Text without lists from the DOCX file"
-        },
-        "process_pdf_text_without_lists": {
-            "Functionality": "Extracts text from a PDF file without lists.",
-            "Parameters": "pdf_file (PDF file path)",
-            "Output": "Extracted text from the PDF file without lists"
-        },
-        "process_txt_file": {
-            "Functionality": "Reads and extracts text from a TXT file.",
-            "Parameters": "txt_file (TXT file object)",
-            "Output": "Text extracted from the TXT file"
-        },
+    
         "translate_text_with_google": {
             "Functionality": "Translates text using Google Translate.",
             "Parameters": "text (text to translate), target_language (language code for translation)",
