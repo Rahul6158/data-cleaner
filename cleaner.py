@@ -165,9 +165,9 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
     '''
         
     st.markdown(project_description1, unsafe_allow_html=True)
-    
+    ''' --- '''
     st.header("Info of the methods used in the code")
-
+    ''' --- '''
     left_column, right_column = st.columns(2)
 
     # List of method names
