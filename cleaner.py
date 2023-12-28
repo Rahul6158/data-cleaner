@@ -63,8 +63,7 @@ def main():
 
     # Add content to the left column
     with left_column:
-        st.image("jangirii.png", width=300)
-        st.title("Text Translation and Conversion to Speech (MultiLingual)")
+        st.title("lef column")
         # Add your content for the left side here
 
     # Add content to the right column
