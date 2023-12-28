@@ -170,6 +170,19 @@ def main():
     # Split the page into two columns
     left_column, right_column = st.columns(2)
 
+    # List of method names
+    method_names = [
+        "process_docx_text",
+        "extract_text_from_uploaded_image",
+        "process_docx_text_without_lists",
+        "process_pdf_text_without_lists",
+        "process_txt_file",
+        "translate_text_with_google",
+        "convert_text_to_speech",
+        "get_binary_file_downloader_html",
+        "convert_text_to_word_doc"
+    ]
+
     # Add content to the left column
     with left_column:
         st.title("left column")
