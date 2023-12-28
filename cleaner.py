@@ -180,7 +180,7 @@ and flawless audio generation. Experience the future of text transformation with
 multilingual, and vibrant app—your go-to for seamless translation and speech conversion."
 '''
     st.markdown(project_description, unsafe_allow_html=True)
-    St.header("How to Use :")
+    st.header("How to Use :")
     project_description1 = '''
     Page 1:
     Upload a File:
