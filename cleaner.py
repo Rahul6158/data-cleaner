@@ -63,11 +63,11 @@ with right_column:
             }
             }
 
-        for method_name, details in method_info.items():
-            st.sidebar.subheader(method_name)
-            for key, value in details.items():
-                st.sidebar.text(f"{key}: {value}")
-            st.sidebar.text("\n")
+            for method_name, details in method_info.items():
+                st.sidebar.subheader(method_name)
+                for key, value in details.items():
+                    st.sidebar.text(f"{key}: {value}")
+                st.sidebar.text("\n")
 
     def main():
         st.image("jangirii.png", width=300)
