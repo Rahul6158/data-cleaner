@@ -190,10 +190,6 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
     # List of method names
     method_names = [
         "process_docx_text",
-        "extract_text_from_uploaded_image",
-        "process_docx_text_without_lists",
-        "process_pdf_text_without_lists",
-        "process_txt_file",
         "translate_text_with_google",
         "convert_text_to_speech",
         "get_binary_file_downloader_html",
