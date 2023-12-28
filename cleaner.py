@@ -16,6 +16,7 @@ with right_column:
         st.sidebar.title("Method Functionality")
 
  method_info = {
+     
         "process_docx_text": {
             "Functionality": "Extracts text from a DOCX file.",
             "Parameters": "docx_file (DOCX file path)",
@@ -61,7 +62,7 @@ with right_column:
             "Parameters": "text (translated text to convert), output_file (output file path)",
             "Output": "Word document containing the translated text"
         }
-
+        }
         for method_name, details in method_info.items():
             st.sidebar.subheader(method_name)
             for key, value in details.items():
