@@ -168,7 +168,21 @@ def display_method_info():
 
 def main():
     # Split the page into two columns
-    st.title("Info of the methods used in the code")
+    st.title("About the Application")
+    project_description = '''
+"Imagine a tool that effortlessly translates text, speaks in multiple languages,
+and transforms documents into speech—all at your fingertips! Our Streamlit-powered app
+is a language wizard: upload DOCX, PDFs, or even images to extract and edit text.
+Not only does it translate text using Google's magic, but it also converts it into
+spoken words with stunning accuracy. Whether you're editing uploaded files or
+directly entering text, our app's got you covered—word counts, language selection,
+and flawless audio generation. Experience the future of text transformation with our intuitive,
+multilingual, and vibrant app—your go-to for seamless translation and speech conversion."
+'''
+st.markdown(project_description, unsafe_allow_html=True)
+
+
+    st.header("Info of the methods used in the code")
 
     left_column, right_column = st.columns(2)
 
