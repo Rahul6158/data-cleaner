@@ -181,8 +181,8 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
 '''
     st.markdown(project_description, unsafe_allow_html=True)
     St.header("How to Use :")
-     project_description1 = '''
-     Page 1:
+    project_description1 = '''
+    Page 1:
     Upload a File:
     
     Use the file uploader to upload a DOCX, PDF, image (JPEG, JPG, PNG), or TXT file. The uploaded file should contain text that you want to translate and convert to speech.
