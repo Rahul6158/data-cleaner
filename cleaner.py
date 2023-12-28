@@ -172,7 +172,8 @@ def main():
 
     # Add content to the left column
     with left_column:
-        st.title("lef column")
+        st.title("left column")
+        display_method_code(method_names)
         # Add your content for the left side here
 
     # Add content to the right column
