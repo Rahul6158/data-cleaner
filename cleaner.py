@@ -103,6 +103,7 @@ and flawless audio generation. Experience the future of text transformation with
 multilingual, and vibrant app—your go-to for seamless translation and speech conversion."
 '''
     st.markdown(project_description, unsafe_allow_html=True)
+''' --- '''
     st.header("How to Use :")
     project_description1 = '''
     ---
@@ -111,14 +112,12 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
     
     ### Page 1: Document and PDF Translation
     1. **Upload a File**:
-       - Use the file uploader to upload a DOCX, PDF, image (JPEG, JPG, PNG), or TXT file. The uploaded file should contain text that you want to translate and convert to speech.
+       - Use the file uploader to upload a DOCX or PDF. The uploaded file should contain text that you want to translate and convert to speech.
       
     2. **View Extracted Text**:
        - Once the file is uploaded, the app will extract the text from the file.
        - If it's a DOCX file, it removes lists (bullets) and displays the extracted text.
        - For PDFs, it extracts the text without lists.
-       - Images are displayed, and the extracted text is shown.
-       - If it's a TXT file, it displays the text.
     
     3. **Edit Text**:
        - The extracted text is displayed in an editable text area where you can modify the text if needed.
