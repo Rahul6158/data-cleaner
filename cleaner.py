@@ -168,7 +168,23 @@ def display_method_info():
 
 def main():
     # Split the page into two columns
-    left_column, right_column = st.columns([2, 3])
+    st.title("Left and Right Column Alignment")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.title("Method Code")
+        display_method_code([
+            "process_docx_text",
+            "extract_text_from_uploaded_image",
+            "process_docx_text_without_lists",
+            "process_pdf_text_without_lists",
+            "process_txt_file"
+        ])
+
+    with col2:
+        st.title("Method Information")
+        display_method_info()
 
     # List of method names
     method_names = [
