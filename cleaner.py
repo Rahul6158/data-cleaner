@@ -1,15 +1,5 @@
 import streamlit as st
 def get_method_code(method_name):
-    if method_name == "process_docx_text":
-        return '''
-        def process_docx_text(docx_file, skip_lists=True):
-            if skip_lists:
-                text = process_docx_text_without_lists(docx_file)
-            else:
-                text = docx2txt.process(docx_file)
-            return text
-        '''
-
     elif method_name == "translate_text_with_google":
         return '''
         def translate_text_with_google(text, target_language):
@@ -71,12 +61,6 @@ def display_method_info():
     st.header("Method Functionality")
 
     method_info = {
-        "process_docx_text": {
-            "Functionality": "Extracts text from a DOCX file.",
-            "Parameters": "docx_file (DOCX file path)",
-            "Output": "Extracted text from the DOCX file"
-        },
-    
         "translate_text_with_google": {
             "Functionality": "Translates text using Google Translate.",
             "Parameters": "text (text to translate), target_language (language code for translation)",
@@ -189,7 +173,6 @@ multilingual, and vibrant app—your go-to for seamless translation and speech c
 
     # List of method names
     method_names = [
-        "process_docx_text",
         "translate_text_with_google",
         "convert_text_to_speech",
         "get_binary_file_downloader_html",
