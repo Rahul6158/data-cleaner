@@ -103,7 +103,7 @@ def display_method_info(method_info):
         st.text("\n")
 
 def display_method_code(method_names):
-    st.header("Method Code Snippets")
+    st.header("code of the method")
     for method_name in method_names:
         method_code = get_method_code(method_name)
         st.code(method_code, language='python')
@@ -185,7 +185,7 @@ def main():
 
     # Add content to the left column
     with left_column:
-        st.title("left column")
+        st.title("Code for the method")
         display_method_code(method_names)
         # Add your content for the left side here
 
