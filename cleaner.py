@@ -1,7 +1,7 @@
 import streamlit as st
 
 def display_method_info():
-    st.sidebar.title("Method Functionality")
+    st.header("Method Functionality")
 
     method_info = {
         "process_docx_text": {
@@ -52,15 +52,24 @@ def display_method_info():
     }
 
     for method_name, details in method_info.items():
-        st.sidebar.subheader(method_name)
+        st.subheader(method_name)
         for key, value in details.items():
-            st.sidebar.text(f"{key}: {value}")
-        st.sidebar.text("\n")
+            st.text(f"{key}: {value}")
+        st.text("\n")
 
 def main():
-    st.image("jangirii.png", width=300)
-    st.title("Text Translation and Conversion to Speech ( MultiLingual )")
-    display_method_info()
+    # Split the page into two columns
+    left_column, right_column = st.columns(2)
+
+    # Add content to the left column
+    with left_column:
+        st.image("jangirii.png", width=300)
+        st.title("Text Translation and Conversion to Speech (MultiLingual)")
+        # Add your content for the left side here
+
+    # Add content to the right column
+    with right_column:
+        display_method_info()
 
 if __name__ == "__main__":
     main()
