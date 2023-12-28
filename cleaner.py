@@ -61,11 +61,6 @@ def display_method_info():
     st.header("Method Functionality")
 
     method_info = {
-        "translate_text_with_google": {
-            "Functionality": "Translates text using Google Translate.",
-            "Parameters": "text (text to translate), target_language (language code for translation)",
-            "Output": "Translated text"
-        },
         "convert_text_to_speech": {
             "Functionality": "Converts text to speech (MP3 format).",
             "Parameters": "text (text to convert), output_file (output file path), language (language code for speech synthesis)",
@@ -80,6 +75,11 @@ def display_method_info():
             "Functionality": "Converts translated text to a Word document.",
             "Parameters": "text (translated text to convert), output_file (output file path)",
             "Output": "Word document containing the translated text"
+        },
+         "translate_text_with_google": {
+            "Functionality": "Translates text using Google Translate.",
+            "Parameters": "text (text to translate), target_language (language code for translation)",
+            "Output": "Translated text"
         }
     }
 
