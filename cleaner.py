@@ -1,6 +1,6 @@
 import streamlit as st
 def get_method_code(method_name):
-    elif method_name == "translate_text_with_google":
+    if method_name == "translate_text_with_google":
         return '''
         def translate_text_with_google(text, target_language):
             google_translator = GoogleTranslator()
