@@ -185,7 +185,6 @@ def main():
 
     # Add content to the left column
     with left_column:
-        st.title("Code for the method")
         display_method_code(method_names)
         # Add your content for the left side here
 
