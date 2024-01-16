@@ -7,9 +7,6 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.feature_extraction.text import CountVectorizer
-from wordcloud import WordCloud
-from scipy.stats import ttest_ind
 
 # Load sample data
 @st.cache
@@ -21,13 +18,16 @@ def load_data():
 st.sidebar.header("Choose Features")
 selected_features = st.sidebar.multiselect(
     "Select features for analysis",
-    ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"]
+    ["sepal_length", "sepal_width", "petal_length", "petal_width"]
 )
 
 # Load data
-uploaded_file = st.file_uploader("Upload your dataset (CSV)", type=["csv"])
+uploaded_file = st.sidebar.file_uploader("Upload your dataset (CSV)", type=["csv"])
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
+else:
+    # Use sample data if no file is uploaded
+    data = load_data()
 
 # Display DataFrame
 st.subheader("Display DataFrame")
@@ -51,8 +51,10 @@ if st.checkbox("Show Boxplot for Outliers"):
         sns.boxplot(x=data[feature])
         st.pyplot()
 
-# Machine Learning
-st.subheader("Machine Learning")
+# Machine Learning - Linear Regression
+st.subheader("Machine Learning - Linear Regression")
+
+# Select the target variable
 target_variable = st.selectbox("Select the target variable for Linear Regression", selected_features)
 
 if st.button("Run Linear Regression"):
@@ -71,12 +73,6 @@ if st.button("Run Linear Regression"):
     # Display coefficients
     st.write("Model Coefficients:")
     st.write(pd.DataFrame({"Feature": selected_features, "Coefficient": model.coef_}))
-
-# Text Mining and NLP
-# ... (Same as in the previous code)
-
-# Statistical Analysis
-# ... (Same as in the previous code)
 
 # Custom Features
 st.subheader("Custom Features")
