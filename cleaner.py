@@ -2,8 +2,13 @@ import streamlit as st
 import pandas as pd
 from transformers import pipeline
 
+# Function to load TAPAS model
+@st.cache_resource
+def load_model():
+    return pipeline("table-question-answering", model="google/tapas-large-finetuned-wtq")
+
 # Initialize the TAPAS model
-pipe = pipeline("table-question-answering", model="google/tapas-large-finetuned-wtq")
+pipe = load_model()
 
 def main():
     st.title("Table Question Answering App")
@@ -26,6 +31,6 @@ def main():
             result = pipe(table=df, query=question)
             st.write("Answer:")
             st.write(result['answer'])
-    
+
 if __name__ == "__main__":
     main()
